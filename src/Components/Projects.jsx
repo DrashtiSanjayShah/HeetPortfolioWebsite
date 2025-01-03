@@ -1,6 +1,6 @@
 import React from "react";
 import { PROJECTS } from "../constants";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
@@ -13,17 +13,27 @@ const Projects = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1.3 }}
-              className="w-full lg:w-1/4 mb-6 flex justify-center"  // Added 'flex justify-center' for centering the image
+              className="w-full lg:w-1/4 mb-6 flex justify-center relative"
             >
-               <img 
-                 src={project.image} 
-                 alt={project.title} 
-                 width={250} 
-                 height={250} 
-                 className="mb-6 rounded block" // Added 'block' for centering
-               /> 
+              <div
+                onClick={() => window.open(project.githubLink, "_blank")}
+                className="relative cursor-pointer"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  width={250}
+                  height={250}
+                  className="mb-6 rounded block"
+                />
+
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  Source Code
+                </div>
+              </div>
             </motion.div>
-            <div className="w-full max-w-xl lg:w-3/4 mb-6"> {/* Added mb-6 to maintain consistent spacing */}
+
+            <div className="w-full max-w-xl lg:w-3/4 mb-6">
               <motion.h6
                 whileInView={{ opacity: 1 }}
                 initial={{ opacity: 0 }}
@@ -42,7 +52,7 @@ const Projects = () => {
               </motion.p>
               {project.technologies.map((technology, index) => (
                 <motion.span
-                key={index}
+                  key={index}
                   whileInView={{ opacity: 1 }}
                   initial={{ opacity: 0 }}
                   transition={{ duration: 1.3 }}

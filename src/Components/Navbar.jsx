@@ -19,17 +19,13 @@ const Navbar = () => {
     { id: 4, text: "Contact" },
   ];
 
-  // This effect runs when the menu is toggled
   useEffect(() => {
     if (isMenuOpen) {
-      // If the menu is open, add padding to the body or content wrapper
-      document.body.style.paddingTop = "100px"; // Adjust this to match the height of your navbar
+      document.body.style.paddingTop = "100px";
     } else {
-      // Remove the padding when the menu is closed
       document.body.style.paddingTop = "0";
     }
 
-    // Clean up when the component is unmounted or updated
     return () => {
       document.body.style.paddingTop = "0";
     };
@@ -56,7 +52,6 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Hamburger Icon for Mobile */}
         <div
           onClick={handleNav}
           className="block md:hidden flex items-center z-50"
@@ -83,7 +78,6 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Mobile Logo */}
         <h1 className="text-3xl font-bold text-blue-800 m-4">HG</h1>
 
         {/* Mobile Navigation Items */}

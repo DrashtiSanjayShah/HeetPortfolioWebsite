@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
 
 const Experience = () => {
+  const handleRoleClick = (certificateImage) => {
+    window.open(certificateImage, "_blank");
+  };
+
   return (
     <div className="border-b border-neutral-900 pb-4">
       <h1 className="my-20 text-center text-4xl text-blue-500">Experience</h1>
@@ -24,11 +28,16 @@ const Experience = () => {
               className="w-full max-w-xl lg:w-3/4"
             >
               <h6 className="mb-2 font-semibold">
-                {experience.role} -{" "}
-                <span className="text-purple-100 text-sm">
-                  {experience.company}
+                <span
+                  onClick={() => handleRoleClick(experience.image)}
+                  className="cursor-pointer text-blue-500 hover:text-blue-700"
+                >
+                  {experience.role}
                 </span>
               </h6>
+
+              <p className="text-base text-blue-500">{experience.company}</p>
+
               <p className="mb-4 text-neutral-400">{experience.description}</p>
               {experience.technologies.map((technology, index) => (
                 <span

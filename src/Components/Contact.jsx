@@ -2,7 +2,7 @@ import React from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
+
 const Contact = () => {
   return (
     <div id="contact" className="border-b border-neutral-900 pb-20">
@@ -30,15 +30,41 @@ const Contact = () => {
         </motion.a>
       </div>
       <div className="mt-8 flex items-center justify-center gap-4 text-2xl text-blue-800">
-        <FaLinkedin />
-        <FaGithub />
-        <FaInstagram />
+        <a
+          href="https://www.linkedin.com/in/heetgudhka"
+          target="_blank"
+          className="hover:text-blue-200"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="https://github.com/HeetGudhka2003"
+          target="_blank"
+          className="hover:text-blue-200"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://www.instagram.com/gudhkaheet"
+          target="_blank"
+          className="hover:text-blue-200"
+          rel="noopener noreferrer"
+        >
+          <FaInstagram />
+        </a>
       </div>
       <h2 className="mt-4 flex justify-center">
         Made by
-        <span className="text-pink-800 font-bold ml-1 underline">
-           Drashti
-        </span>
+        <a
+          href="https://portfolio-c4508.web.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-800 font-bold ml-1 underline"
+        >
+          Drashti
+        </a>
       </h2>
     </div>
   );

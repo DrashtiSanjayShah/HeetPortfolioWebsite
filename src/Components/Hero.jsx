@@ -1,5 +1,6 @@
 import React from "react";
 import profilePic from "../assets/profilePic.jpg";
+import resume from "../assets/Heet's_Resume.pdf";
 import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
 
@@ -7,6 +8,7 @@ const Hero = () => {
   return (
     <div className="border-b border-neutral-900 pb-4 pt-40 md:pt-12 lg:mb-12">
       <div className="flex flex-wrap items-center justify-between">
+        
         {/* Left Content */}
         <div className="w-full lg:w-1/2 px-4">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -25,13 +27,13 @@ const Hero = () => {
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1 }}
-              className="my-4 max-w-lg py-4 text-base md:text-xl tracking-tighter"
+              className="my-4 max-w-lg py-4 text-lg md:text-xl tracking-tighter"
             >
               {HERO_CONTENT}
             </motion.p>
             <a
-              href="/path/to/your-resume.pdf"
-              download="Drashti_Resume"
+              href={resume}
+              download="Heet_Resume"
               className="mt-4 group flex h-16 w-72 items-center justify-center rounded-full bg-gradient-to-r from-blue-200 via-blue-700 to-blue-900 text-white text-2xl duration-300 hover:bg-gradient-to-l hover:shadow-2xl hover:shadow-purple-600/30 hover:font-bold"
             >
               Download My Resume
@@ -47,7 +49,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 1.5 }}
             src={profilePic}
             alt="Heet profile-pic"
-            className="rounded-full h-48 w-48 md:h-64 md:w-64"
+            className="rounded-full aspect-square object-cover lg:mt-[-5rem]"
           />
         </div>
       </div>
