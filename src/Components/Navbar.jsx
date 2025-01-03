@@ -36,7 +36,7 @@ const Navbar = () => {
       {/* Logo Section */}
       <div className="flex items-center justify-between">
         <div className="flex flex-shrink-0 items-center">
-          <h1 className="text-3xl sm:text-5xl font-bold text-blue-800">HG</h1>
+          <h1 className="text-3xl sm:text-5xl font-bold text-blue-800"><a href="/">HG</a></h1>
         </div>
 
         {/* Desktop Navigation Links */}
@@ -78,7 +78,7 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <h1 className="text-3xl font-bold text-blue-800 m-4">HG</h1>
+        <h1 className="text-3xl font-bold text-blue-800 m-4"><a href="/">HG</a></h1>
 
         {/* Mobile Navigation Items */}
         {navItems.map((item) => (
