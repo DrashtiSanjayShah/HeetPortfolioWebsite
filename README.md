@@ -27,3 +27,5 @@ The projects are in the Projects.jsx file and the corresponding details like the
 The ‘Contact Me’ section of your website has your location, email, and links to the socials.  
 
 <img width="1439" alt="Screenshot 2025-01-04 at 9 43 15 AM" src="https://github.com/user-attachments/assets/20d50426-b045-4173-9e2b-95dbde6594c5" />
+
+The hosted website link: https://famous-bublanina-d637d4.netlify.app
